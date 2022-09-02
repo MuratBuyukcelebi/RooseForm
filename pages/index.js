@@ -2,7 +2,7 @@ import Styles from '../styles/Home.module.scss'
 
 function Builders() {
   const builderList = [
-    {name: 'Header', icon: 'H'},
+    { slug: 'header' , name: 'Header', icon: 'H' },
   ]
 
   return (

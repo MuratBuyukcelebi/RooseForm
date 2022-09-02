@@ -33,6 +33,7 @@
     align-items: center;
     padding: 12px;
     gap: 24px;
+    cursor: pointer;
 
     &-icon {
       border: 2px solid #3F3D56;
@@ -44,12 +45,28 @@
       align-items: center;
       justify-content: center;
       font-weight: 700;
+      transition: all .15s;
+      user-select: none;
+      pointer-events: none;
     }
     &-text {
       color:  #3F3D56;
       font-size: 36px;
       line-height: 1.5;
       font-weight: 600;
+      transition: all .15s;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    &:hover & {
+      &-icon {
+        border-color: #fff;
+        color: #fff;
+      }
+      &-text {
+        color: #fff;
+      }
     }
   }
 }
