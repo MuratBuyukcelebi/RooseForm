@@ -1,6 +1,9 @@
 import React from "react";
 import Styles from '../styles/Home.module.scss'
 import { motion, AnimateSharedLayout } from "framer-motion";
+import Example from './example'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 function Builders() {
   const builderList = [
@@ -36,14 +39,15 @@ function FormElements() {
 export default function Home() {
   return (
     <div className={Styles.home}>
-      <AnimateSharedLayout>
-        <div className={Styles.home__list}>
-          <Builders />
-        </div>
-        <div className={Styles.home__form}>
-          <FormElements />
-        </div>
-      </AnimateSharedLayout>
+      <div className={Styles.home__list}>
+        <Builders />
+      </div>
+      <div className={Styles.home__form}>
+        <FormElements />
+      </div>
+      <DndProvider backend={HTML5Backend}>
+        <Example />
+      </DndProvider>
     </div>
   )
 }
