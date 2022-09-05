@@ -30,12 +30,6 @@ function Builders() {
   )
 }
 
-function FormElements() {
-  return (
-    <></>
-  )
-}
-
 export default function Home() {
   return (
     <div className={Styles.home}>
@@ -43,7 +37,6 @@ export default function Home() {
         <Builders />
       </div>
       <div className={Styles.home__form}>
-        <FormElements />
       </div>
       <DndProvider backend={HTML5Backend}>
         <Example />
