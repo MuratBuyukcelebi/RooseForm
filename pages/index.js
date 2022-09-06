@@ -12,10 +12,6 @@ function Builders() {
     { slug: 'header' , name: 'Header' },
   ]
 
-  const onViewportBoxUpdate = () => {
-    console.log('deneme')
-  }
-
   return (
     builderList.map((item, index) => (
       <motion.div key={index} dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} drag dragElastic={1} className={Styles.home__builder}>
@@ -32,15 +28,17 @@ function Builders() {
 
 export default function Home() {
   return (
-    <div className={Styles.home}>
-      <div className={Styles.home__list}>
-        <Builders />
-      </div>
-      <div className={Styles.home__form}>
+    <>
+      <div className={Styles.home}>
+        <div className={Styles.home__list}>
+          <Builders />
+        </div>
+        <div className={Styles.home__form}>
+        </div>
       </div>
       <DndProvider backend={HTML5Backend}>
         <Example />
       </DndProvider>
-    </div>
+    </>
   )
 }

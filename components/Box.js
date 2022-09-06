@@ -1,5 +1,8 @@
 import { useDrag } from 'react-dnd'
 import { ItemTypes } from './ItemTypes.js'
+import {motion} from "framer-motion";
+import Styles from "../styles/Home.module.scss";
+import React from "react";
 const style = {
   border: '1px dashed gray',
   backgroundColor: 'white',
@@ -9,6 +12,7 @@ const style = {
   cursor: 'move',
   float: 'left',
 }
+
 export const Box = function Box({ name }) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.BOX,
@@ -24,10 +28,14 @@ export const Box = function Box({ name }) {
       handlerId: monitor.getHandlerId(),
     }),
   }))
-  const opacity = isDragging ? 0.4 : 1
   return (
-    <div ref={drag} style={{ ...style, opacity }} data-testid={`box`}>
-      {name}
+    <div ref={drag} data-testid={`box`} className={Styles.home__builder}>
+      <div className={Styles['home__builder-icon']}>
+        { name.charAt(0) }
+      </div>
+      <div className={Styles['home__builder-text']}>
+        { name }
+      </div>
     </div>
   )
 }

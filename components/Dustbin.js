@@ -1,5 +1,7 @@
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from './ItemTypes.js'
+import Styles from "../styles/Home.module.scss";
+import React from "react";
 const style = {
   height: '12rem',
   width: '12rem',
@@ -29,8 +31,7 @@ export const Dustbin = () => {
     backgroundColor = 'darkkhaki'
   }
   return (
-    <div ref={drop} style={{ ...style, backgroundColor }} data-testid="dustbin">
-      {isActive ? 'Release to drop' : 'Drag a box here'}
+    <div ref={drop} data-testid="dustbin" className={Styles.home__form}>
     </div>
   )
 }

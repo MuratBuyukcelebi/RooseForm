@@ -1,16 +1,20 @@
-import { memo } from 'react'
+import React, { memo } from 'react'
 import { Box } from './Box.js'
 import { Dustbin } from './Dustbin.js'
+import Styles from '../styles/Home.module.scss'
+
 export const Container = memo(function Container() {
   return (
-    <div>
+    <div className={Styles.home}>
       <div style={{ overflow: 'hidden', clear: 'both' }}>
-        <Dustbin />
+        <div className={Styles.home__list}>
+          <Box name="Header" />
+          <Box name="Header" />
+          <Box name="Header" />
+        </div>
       </div>
       <div style={{ overflow: 'hidden', clear: 'both' }}>
-        <Box name="Glass" />
-        <Box name="Banana" />
-        <Box name="Paper" />
+        <Dustbin />
       </div>
     </div>
   )
