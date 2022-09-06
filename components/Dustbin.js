@@ -13,8 +13,8 @@ export const Dustbin = () => {
       getItem: monitor.getItem(),
     }),
   }))
+  console.log()
   return (
-    <div ref={drop} data-testid="dustbin" className={Styles.home__form}>
-    </div>
+    <div ref={drop} data-testid="dustbin" className={Styles.home__form} />
   )
 }
