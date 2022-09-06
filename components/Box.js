@@ -3,15 +3,6 @@ import { ItemTypes } from './ItemTypes.js'
 import {motion} from "framer-motion";
 import Styles from "../styles/Home.module.scss";
 import React from "react";
-const style = {
-  border: '1px dashed gray',
-  backgroundColor: 'white',
-  padding: '0.5rem 1rem',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
-  cursor: 'move',
-  float: 'left',
-}
 
 export const Box = function Box({ name }) {
   const [{ isDragging }, drag] = useDrag(() => ({
