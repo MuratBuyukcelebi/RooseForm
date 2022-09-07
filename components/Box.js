@@ -4,13 +4,10 @@ import {motion} from "framer-motion";
 import Styles from "../styles/Home.module.scss";
 import React from "react";
 
-export const Box = function Box({ name }) {
-  const [{ isDragging }, drag] = useDrag(() => ({
+export const Box = function Box({ name, slug }) {
+  const [_, drag] = useDrag(() => ({
     type: ItemTypes.BOX,
-    item: { name },
-    end: (item, monitor) => {
-      const dropResult = monitor.getDropResult()
-    },
+    item: { name, slug },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
       handlerId: monitor.getHandlerId(),

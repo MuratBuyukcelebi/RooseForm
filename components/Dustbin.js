@@ -4,7 +4,7 @@ import Styles from "../styles/Home.module.scss";
 import React from "react";
 
 export const Dustbin = () => {
-  const [{ canDrop, isOver, getItem }, drop] = useDrop(() => ({
+  const [_, drop] = useDrop(() => ({
     accept: ItemTypes.BOX,
     drop: (item, monitor) => {
       console.log(monitor.getItem())
