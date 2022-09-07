@@ -6,14 +6,14 @@ import React from "react";
 export const Dustbin = () => {
   const [{ canDrop, isOver, getItem }, drop] = useDrop(() => ({
     accept: ItemTypes.BOX,
-    drop: () => ({ name: 'Dustbin' }),
+    drop: (item, monitor) => {
+      console.log(monitor.getItem())
+    },
     collect: (monitor) => ({
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop(),
-      getItem: monitor.getItem(),
     }),
   }))
-  console.log()
   return (
     <div ref={drop} data-testid="dustbin" className={Styles.home__form} />
   )
