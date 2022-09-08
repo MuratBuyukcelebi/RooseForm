@@ -7,16 +7,13 @@ import { useDrop } from 'react-dnd'
 import Header from "./form/header";
 
 export const Dustbin = () => {
-  const [{canDrop, isOver, getItem}, drop] = useDrop(() => ({
+  const [{getItem}, drop] = useDrop(() => ({
     accept: ItemTypes.BOX,
     drop: (item, monitor) => {
       let itemSlug = monitor.getItem()?.slug
-      console.log(components.find((element) => element.slug === itemSlug))
       listTry.push( components.find((element) => element?.slug === itemSlug) )
     },
     collect: (monitor) => ({
-      isOver: monitor.isOver(),
-      canDrop: monitor.canDrop(),
       getItem: monitor.getItem(),
     }),
   }))
@@ -25,7 +22,7 @@ export const Dustbin = () => {
     { slug:'test', element: <div>test</div> },
     { slug:'header', element: <Header /> },
   ]
-  const [listTry, setListTry] = useState([])
+  const [listTry, _] = useState([])
 
   return (
     <div ref={drop} data-testid="dustbin" className={Styles.home__form}>

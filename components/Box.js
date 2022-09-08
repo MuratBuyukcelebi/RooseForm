@@ -19,7 +19,7 @@ export const Box = function Box({ name, slug }) {
         { name.charAt(0).toUpperCase() }
       </div>
       <div className={Styles['home__builder-text']}>
-        { name }
+        { name.charAt(0).toUpperCase() + name.slice(1) }
       </div>
     </div>
   )
