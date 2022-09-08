@@ -22,7 +22,7 @@ export const Dustbin = () => {
     { slug:'test', element: <div>test</div> },
     { slug:'header', element: <Header /> },
   ]
-  const [listTry, _] = useState([])
+  const [listTry, setListTry] = useState([])
 
   return (
     <div ref={drop} data-testid="dustbin" className={Styles.home__form}>
