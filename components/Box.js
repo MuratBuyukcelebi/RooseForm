@@ -16,7 +16,7 @@ export const Box = function Box({ name, slug }) {
   return (
     <div ref={drag} data-testid={`box`} className={Styles.home__builder}>
       <div className={Styles['home__builder-icon']}>
-        { name.charAt(0) }
+        { name.charAt(0).toUpperCase() }
       </div>
       <div className={Styles['home__builder-text']}>
         { name }

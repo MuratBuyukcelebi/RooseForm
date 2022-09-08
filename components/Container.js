@@ -9,7 +9,7 @@ export const Container = memo(function Container() {
   function BoxList() {
     const boxList = [
       { name: 'Header', slug: 'header' },
-      { name: 'Header', slug: 'header' },
+      { name: 'Test', slug: 'test' },
       { name: 'Header', slug: 'header' }
     ]
     return (
