@@ -3,8 +3,6 @@ import { Box } from './Box.js'
 import { Dustbin } from './Dustbin.js'
 import Styles from '../styles/Home.module.scss'
 
-
-
 export const Container = memo(function Container() {
   function BoxList() {
     const boxList = [

@@ -7,7 +7,7 @@ import { useDrop } from 'react-dnd'
 import Header from "./form/header";
 
 export const Dustbin = () => {
-  const [{getItem}, drop] = useDrop(() => ({
+  const [_, drop] = useDrop(() => ({
     accept: ItemTypes.BOX,
     drop: (item, monitor) => {
       let itemSlug = monitor.getItem()?.slug
