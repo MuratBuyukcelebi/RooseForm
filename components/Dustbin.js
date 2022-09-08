@@ -20,7 +20,6 @@ export const Dustbin = () => {
   const components = [
     { slug:'header', element: <Header /> },
     { slug:'test', element: <div>test</div> },
-    { slug:'header', element: <Header /> },
   ]
   const [listTry, setListTry] = useState([])
 
