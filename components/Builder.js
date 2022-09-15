@@ -1,10 +1,9 @@
 import { useDrag } from 'react-dnd'
 import { ItemTypes } from './ItemTypes.js'
-import {motion} from "framer-motion";
 import Styles from "../styles/Home.module.scss";
 import React from "react";
 
-export const Box = function Box({ name, slug }) {
+export const Builder = function Box({ name, slug }) {
   const [_, drag] = useDrag(() => ({
     type: ItemTypes.BOX,
     item: { name, slug },

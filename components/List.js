@@ -4,9 +4,9 @@ import { ItemTypes } from './ItemTypes.js'
 import { useDrop } from 'react-dnd'
 
 //Form Items
-import Header from "./form/header";
+import Header from "./builders/header";
 
-export const Dustbin = () => {
+export const List = () => {
   const [_, drop] = useDrop(() => ({
     accept: ItemTypes.BOX,
     drop: (item, monitor) => {

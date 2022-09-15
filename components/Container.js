@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
-import { Box } from './Box.js'
-import { Dustbin } from './Dustbin.js'
+import { Builder } from './Builder.js'
+import { List } from './List.js'
 import Styles from '../styles/Home.module.scss'
 
 export const Container = memo(function Container() {
@@ -12,7 +12,7 @@ export const Container = memo(function Container() {
     ]
     return (
       boxList.map((item, key) =>
-        <Box key={key} name={item.name} slug={item.slug} />
+        <Builder key={key} name={item.name} slug={item.slug} />
       )
     )
   }
@@ -24,7 +24,7 @@ export const Container = memo(function Container() {
         </div>
       </div>
       <div style={{ overflow: 'hidden', clear: 'both' }}>
-        <Dustbin />
+        <List />
       </div>
     </div>
   )
