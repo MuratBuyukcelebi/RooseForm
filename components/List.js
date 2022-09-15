@@ -21,11 +21,11 @@ export const List = () => {
     { slug:'header', element: <Header /> },
     { slug:'test', element: <div>test</div> },
   ]
-  const [listTry, setListTry] = useState([])
+  const [listTry, setListTry] = useState([{ slug:'header', element: <Header /> }])
 
   return (
     <div ref={drop} data-testid="dustbin" className={Styles.home__form}>
-      {listTry.map((item, key) => <div key={key}>{item?.element}</div>)}
+      {listTry.map((item, key) => <div style={{ width: '100%' }} key={key}>{item?.element}</div>)}
     </div>
   )
 }

@@ -23,7 +23,7 @@ export const Container = memo(function Container() {
           <BoxList />
         </div>
       </div>
-      <div style={{ overflow: 'hidden', clear: 'both' }}>
+      <div style={{ overflow: 'hidden', clear: 'both'}}>
         <List />
       </div>
     </div>
