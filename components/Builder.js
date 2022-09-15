@@ -21,7 +21,7 @@ export const Builder = function Box({ name, slug }) {
         { name.charAt(0).toUpperCase() }
       </div>
       <div className={Styles['home__builder-text']}>
-        { upperCase.startCase( name ) }
+        { upperCase.startCase(name) }
       </div>
     </div>
   )
