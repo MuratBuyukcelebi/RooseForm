@@ -28,6 +28,67 @@
     padding: 24px;
     gap: 12px;
     border: 2px solid #FF6B6B;
+
+    &-item {
+      position: relative;
+      width: 100%;
+      border: 1px solid transparent;
+      transition: all .2s;
+
+      & > * {
+        scale: 1;
+        transition: all .2s;
+      }
+      &:hover {
+        border-color: #fff;
+
+        & > .home__form-content {
+          scale: 0.9;
+          margin-right: auto;
+          transform: translateX(-5%);
+        }
+        & > .home__form-action {
+          opacity: 1;
+        }
+      }
+    }
+    &-action {
+      opacity: 0;
+      position: absolute;
+      right: 12px;
+      height: 100%;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+
+      & > button {
+        height: 36px;
+        width: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FF6B6B;
+        cursor: pointer;
+        border: none;
+        transition: all .2s;
+
+        & > svg {
+          fill: #3F3D56;
+          transition: all .2s;
+        }
+
+        &:hover {
+          background: darken(#FF6B6B, 6%);
+
+         & > svg {
+           fill: #000;
+         }
+        }
+      }
+    }
   }
 
   //List Items

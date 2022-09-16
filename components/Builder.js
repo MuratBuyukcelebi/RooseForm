@@ -2,7 +2,6 @@ import { useDrag } from 'react-dnd'
 import { ItemTypes } from './ItemTypes.js'
 import Styles from "../styles/Home.module.scss";
 import React from "react";
-import upper from "lodash";
 
 export const Builder = function Box({ name, slug }) {
   const upperCase = require('lodash');
