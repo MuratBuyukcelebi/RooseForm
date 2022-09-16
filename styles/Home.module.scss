@@ -76,6 +76,8 @@
         transition: all .2s;
 
         & > svg {
+          user-select: none;
+          pointer-events: none;
           fill: #3F3D56;
           transition: all .2s;
         }
