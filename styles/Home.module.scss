@@ -20,7 +20,6 @@
   &__form {
     margin: 0;
     max-height: calc(100vh - (118px + 48px));
-    min-height: 200px;
     overflow-y: auto;
     display: flex;
     height: 100%;
@@ -99,6 +98,19 @@
         }
       }
     }
+  }
+  &__empty {
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted #FF6B6B;
+    height: 100%;
+    width: 100%;
+    padding: 42px;
+    font-size: 48px;
+    font-weight: bolder;
   }
 
   //List Items

@@ -10,7 +10,7 @@ import Scheme from "./builders/Scheme";
 import Header from "./builders/header";
 
 export const List = () => {
-  const [_, drop] = useDrop(() => ({
+  const [{getItemType}, drop] = useDrop(() => ({
     accept: ItemTypes.BOX,
     drop: (item, monitor) => {
       let itemSlug = monitor.getItem()?.slug
@@ -18,13 +18,26 @@ export const List = () => {
     },
     collect: (monitor) => ({
       getItem: monitor.getItem(),
+      getItemType: monitor.getItemType()
     }),
   }))
+  const opacity = getItemType ? 1 : 0.5
   const components = [
     { slug:'header', element: <Header /> },
     { slug:'test', element: <div>test</div> },
   ]
   const [listTry, setListTry] = useState([])
+
+  //Empty State
+  const EmptyState = (e) => {
+    if (listTry.length  === 0) {
+      return (
+        <div className={Styles.home__empty} style={{ opacity }}>
+          Drag Object Here
+        </div>
+      )
+    }
+  }
 
   return (
     <div>
@@ -32,6 +45,7 @@ export const List = () => {
         {listTry.map((item, key) =>
          <Scheme key={key} item={item}/>
         )}
+        <EmptyState />
       </Reorder.Group>
     </div>
   )
