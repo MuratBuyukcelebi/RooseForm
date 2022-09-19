@@ -8,6 +8,7 @@ export const Scheme = ({ item }) => {
 
   //Delete Action
   const deleteAction = (e) => {
+    // Shit code
     e.target.parentElement.parentElement.parentElement.remove()
   }
 
