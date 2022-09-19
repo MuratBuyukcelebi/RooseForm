@@ -30,7 +30,7 @@ export const List = () => {
 
   //Empty State
   const EmptyState = (e) => {
-    if (listTry.length  === 0) {
+    if (listTry.length === 0) {
       return (
         <div className={Styles.home__empty} style={{ opacity }}>
           Drag Object Here
