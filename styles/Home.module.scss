@@ -20,6 +20,7 @@
   &__form {
     margin: 0;
     max-height: calc(100vh - (118px + 48px));
+    min-height: 160px;
     overflow-y: auto;
     display: flex;
     height: 100%;
