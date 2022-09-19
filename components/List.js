@@ -28,9 +28,9 @@ export const List = () => {
 
   return (
     <div>
-      <Reorder.Group ref={drop} data-testid="dustbin" className={Styles.home__form} axis="y" onReorder={setListTry} values={listTry}>
-        {listTry.map((item, key) =>
-         <Scheme key={key} item={item}/>
+      <Reorder.Group layoutScroll ref={drop} data-testid="dustbin" className={Styles.home__form} axis="y" onReorder={setListTry} values={listTry}>
+        {listTry.map((item) =>
+         <Scheme key={item} item={item}/>
         )}
       </Reorder.Group>
     </div>

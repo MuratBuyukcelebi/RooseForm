@@ -13,8 +13,7 @@ export const Scheme = ({ item }) => {
 
   return (
     <Reorder.Item
-      value={item?.key}
-      id={item?.key}
+      value={item.slug}
       style={{ width: '100%', y }}
       dragListener={false}
       dragControls={dragControls}

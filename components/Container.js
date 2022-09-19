@@ -16,6 +16,7 @@ export const Container = memo(function Container() {
       )
     )
   }
+
   return (
     <div className={Styles.home}>
       <div style={{ overflow: 'hidden', clear: 'both' }}>
