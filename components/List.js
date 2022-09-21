@@ -38,12 +38,15 @@ export const List = () => {
       )
     }
   }
+  const deleteAction = (e) => {
+    console.log('test')
+  }
 
   return (
     <div>
       <Reorder.Group layoutScroll ref={drop} data-testid="dustbin" className={Styles.home__form} axis="y" onReorder={setListTry} values={listTry}>
         {listTry.map((item, key) =>
-         <Scheme key={key} item={item}/>
+         <Scheme key={key} item={item} deleteAction={deleteAction}/>
         )}
         <EmptyState />
       </Reorder.Group>

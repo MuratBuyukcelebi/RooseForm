@@ -2,15 +2,9 @@ import React from "react";
 import { useMotionValue, Reorder, useDragControls } from "framer-motion";
 import Styles from "../../styles/Home.module.scss";
 
-export const Scheme = ({ item }) => {
+export const Scheme = ({ item, deleteAction }) => {
   const y = useMotionValue(0);
   const dragControls = useDragControls();
-
-  //Delete Action
-  const deleteAction = (e) => {
-    // Shit code
-    //e.target.parentElement.parentElement.parentElement.remove()
-  }
 
   return (
     <Reorder.Item
